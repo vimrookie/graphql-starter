@@ -1,6 +1,6 @@
+import { resolvers } from './resolvers';
 import { ApolloServer } from 'apollo-server';
 import { DateTimeMock, EmailAddressMock, UnsignedIntMock } from 'graphql-scalars';
-
 import { environment } from './environment';
 import { addMockUsersAsync, mongoDbProvider } from './mongodb.provider';
 import * as typeDefs from './type-defs.graphql';
@@ -11,6 +11,7 @@ import * as typeDefs from './type-defs.graphql';
 
   const server = new ApolloServer({
     typeDefs,
+    resolvers,
     introspection: environment.apollo.introspection,
     mockEntireSchema: false, // TODO: Remove in PROD.
     mocks: {

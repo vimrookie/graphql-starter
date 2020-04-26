@@ -7,10 +7,17 @@
     "build:prod": "webpack --config webpack.production.js",
     "build:dev": "webpack --config webpack.development.js",
     "start": "node dist/server",
-    "start:env": "node --require dotenv/config dist/server"
+    "start:env": "node --require dotenv/config dist/server",
+    "graphql:codegen": "graphql codegen",
+    "prebuild:dev": "npm run graphql:codegen",
+    "prebuild:prod": "npm run graphql:codegen",
+    "pretest": "npm run graphql:codegen",
+    "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Gleycer Parra"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/mongodb": "^3.5.8",
@@ -22,12 +29,18 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-merge": "^4.2.2",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "graphql-cli": "4.0.0-alpha-e8e8dc8.587"
   },
   "dependencies": {
+    "@graphql-codegen/typescript": "^1.13.3",
+    "@graphql-codegen/typescript-mongodb": "^1.13.3",
+    "@test-graphql-cli/codegen": "^4.0.0-alpha-e8e8dc8.587",
     "apollo-server": "^2.12.0",
     "graphql": "^15.0.0",
+    "graphql-cli": "^4.0.0-alpha-e8e8dc8.587",
     "graphql-scalars": "^1.1.0",
     "mongodb": "^3.5.6"
-  }
+  },
+  "private": true
 }

@@ -1,0 +1,10 @@
+schema: './**/*.graphql'
+require:
+  - ts-node/register
+extensions:
+  codegen:
+    generates:
+      ./src/types.ts:
+        plugins:
+          - typescript
+          - typescript-mongodb

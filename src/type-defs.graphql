@@ -76,6 +76,14 @@ type Query {
   Get post by ID.
   """
   post(id: ID!): Post
+  """
+  Get user by ID.
+  """
+  user(id: ID!): User
+  """
+  Get users.
+  """
+  users: [User]
 }
 
 """
