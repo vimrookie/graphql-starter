@@ -36,7 +36,7 @@
     "@graphql-codegen/typescript": "^1.13.3",
     "@graphql-codegen/typescript-mongodb": "^1.13.3",
     "@test-graphql-cli/codegen": "^4.0.0-alpha-e8e8dc8.587",
-    "apollo-server": "^2.14.2",
+    "apollo-server": "^2.25.3",
     "graphql": "^15.0.0",
     "graphql-cli": "^4.0.0-alpha-e8e8dc8.587",
     "graphql-scalars": "^1.1.0",
